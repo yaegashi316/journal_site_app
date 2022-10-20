@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('articles', App\Http\Controllers\ArticleController::class);
+                //という URL にアクセスすると、ArticleController の index アクション(メソッド)が呼び出されます。
+                //resourceのときはアクション書かなくても自動で入力されてる
+
